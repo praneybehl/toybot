@@ -6,7 +6,17 @@
 	"repository": "https://github.com/praneybehl/toybot",
 	"author": "Praney Behl @praneybehl",
 	"license": "MIT",
-	"private": false,
+	"engines": {
+		"node": ">10"
+	},
+	"keywords": [
+		"cli",
+		"toybot",
+		"toy-robot",
+		"typescript",
+		"javascript",
+		"nodejs"
+	],
 	"dependencies": {
 		"fs-extra": "^9.0.0",
 		"rimraf": "^3.0.2"
