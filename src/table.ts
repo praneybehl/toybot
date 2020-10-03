@@ -9,6 +9,15 @@ export default class Table {
 		this.height = height;
 	}
 
+	public isInBounds(pos: IPosition): boolean {
+		return (
+			pos.x >= 0 ||
+			pos.x <= this.width - 1 ||
+			pos.y >= 0 ||
+			pos.y <= this.height - 1
+		);
+	}
+
 	public isBorder(pos: IPosition): boolean {
 		return (
 			pos.x === 0 ||
