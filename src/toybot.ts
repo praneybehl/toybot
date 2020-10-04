@@ -1,6 +1,6 @@
 import { IPosition } from "./table";
 
-export const enum Directions {
+export enum Directions {
 	"NORTH",
 	"EAST",
 	"SOUTH",
@@ -24,8 +24,8 @@ export default class Toybot {
 		this.isPlaced = params.isPlaced || false;
 	}
 
-	public place(params: { position: IPosition; direction: Directions }): void {
-		const { position, direction } = params;
+	public place(options: IToyBot): void {
+		const { position, direction } = options;
 		const { x, y } = position;
 		if (!this.isPlaced) {
 			this.isPlaced = true;
