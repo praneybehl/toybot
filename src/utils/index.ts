@@ -1,9 +1,7 @@
-import { red, green, cyan, blue, yellow, bgBlue, bold } from "kleur";
+import { red, cyan } from "kleur";
 import * as figlet from "figlet";
 
 import { ConsoleMessage } from "../constants/console-message";
-
-const newLine = "\n";
 
 export const showTitleAndBanner = (): void => {
 	console.log(
@@ -12,6 +10,14 @@ export const showTitleAndBanner = (): void => {
 		)
 	);
 	console.info(cyan(ConsoleMessage.BANNER));
+};
+
+export const showError = (message: string | Error): void => {
+	console.error(red(ConsoleMessage.ERROR) + message);
+};
+
+export const simpleLog = (message: string): void => {
+	console.log(cyan(message));
 };
 
 export const showOutput = (data: string): void => {
