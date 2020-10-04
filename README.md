@@ -244,14 +244,25 @@ Conventional-Commit messages improve **Readability** of commit message and **Aut
 ## NPM scripts dictionary
 
 `npm start`:			Build and Start application.
+
 `npm run  build`:		Creates a production build.
+
 `npm run test`:			Run linting & unit tests.
+
 `npm run test:unit`:	Run unit tests only.
+
 `npm run lint`:		    Run linting.
+
 `npm run global`:	    Builds application and installs it as global package, exposed global name `Zombieland`.
+
 `npm run clean:some`:	Cleans the ./lib and ./docs folders.
+
 `npm run clean:all`:	Cleans node_modules, package-lock and above.
+
 `npm run tscov`:        Runs typescript coverage report.
+
 `npm run release`:        Runs standard-version to bump version, and generate changelogs.
+
 `npm run publish-package`: Builds and publishes package to npm.
-`npm run docs`:         Build documentation using tsdocs.  
+
+`npm run docs`:         Build documentation using tsdocs.
