@@ -80,7 +80,7 @@ The solution to this coding challenge takes more functional approach to programm
 
 ## Tech used
 This project mainly relies on the following platform, tools and libraries:
-Node.js, TypeScript, mocha, chai, sinon, tsdocs and inquirer.
+Node.js, TypeScript, jest, tsdocs, tscov.
 
 ## Testing
 For testing, this project is setup with the following testing tools and libraries:
