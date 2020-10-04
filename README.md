@@ -98,8 +98,8 @@ For testing, this project is setup with the following testing tools and librarie
 This project uses [Github Actions](https://github.com/praneybehl/toybot/actions) for CI pipelines for continuous build and testing.
 
 ## Input Format
-This application allows the user to provide input in multiple formats, using .txt file, .json file and interactive commandline.
-Sample file input data is provided in the `.sample-input/` folder for your reference.
+This application allows the user to provide input using interactive commandline interface.
+Also provided is sample file input data is provided in the `.sample-input/` folder for your reference.
 
 ### Command-line interface(CLI)
 When you start the application, it automatically takes you into the command-line interface where you can provide commands for placing and moving the toy robot.
