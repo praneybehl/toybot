@@ -58,7 +58,9 @@ readLine.on("line", (line: string) => {
 			simulator.run(command);
 		}
 	} else {
-		if (command === "EXIT") {
+		if (command === "HELP") {
+			simpleLog(ConsoleMessage.HELP);
+		} else if (command === "EXIT") {
 			exitApplication = true;
 		} else {
 			showError(ConsoleMessage.INVALID_COMMAND);
