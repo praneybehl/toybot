@@ -25,22 +25,22 @@ describe("Table", () => {
 		});
 	});
 
-	describe("isBorder()", () => {
-		it("should be true when robot's coordinates is at border", () => {
+	describe("isInBounds()", () => {
+		it("should be true when robot's coordinates is inside table coordinates", () => {
 			const table = new Table();
-			expect(table.isBorder({ x: 0, y: 0 })).toBe(true);
-			expect(table.isBorder({ x: 0, y: 2 })).toBe(true);
-			expect(table.isBorder({ x: 2, y: 0 })).toBe(true);
-			expect(table.isBorder({ x: 3, y: 4 })).toBe(true);
-			expect(table.isBorder({ x: 4, y: 3 })).toBe(true);
+			expect(table.isInBounds({ x: 0, y: 0 })).toBe(true);
+			expect(table.isInBounds({ x: 0, y: 2 })).toBe(true);
+			expect(table.isInBounds({ x: 2, y: 0 })).toBe(true);
+			expect(table.isInBounds({ x: 3, y: 4 })).toBe(true);
+			expect(table.isInBounds({ x: 4, y: 3 })).toBe(true);
 		});
 
-		it("should be false when robot's coordinates is not at border", () => {
+		it("should be false when robot's coordinates is outside table coordinates", () => {
 			const table = new Table();
-			expect(table.isBorder({ x: 1, y: 2 })).toBe(false);
-			expect(table.isBorder({ x: 1, y: 1 })).toBe(false);
-			expect(table.isBorder({ x: 2, y: 3 })).toBe(false);
-			expect(table.isBorder({ x: 3, y: 3 })).toBe(false);
+			expect(table.isInBounds({ x: 1, y: 5 })).toBe(false);
+			expect(table.isInBounds({ x: 4, y: 5 })).toBe(false);
+			expect(table.isInBounds({ x: 5, y: 5 })).toBe(false);
+			expect(table.isInBounds({ x: 6, y: 9 })).toBe(false);
 		});
 	});
 });
