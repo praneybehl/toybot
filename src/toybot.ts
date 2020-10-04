@@ -1,10 +1,10 @@
 import { IPosition } from "./table";
 
 export enum Directions {
-	"NORTH",
-	"EAST",
-	"SOUTH",
-	"WEST",
+	NORTH = "NORTH",
+	EAST = "EAST",
+	SOUTH = "SOUTH",
+	WEST = "WEST",
 }
 
 export interface IToyBot {
@@ -12,6 +12,25 @@ export interface IToyBot {
 	direction: Directions;
 	isPlaced?: boolean;
 }
+
+const directionTurnMap = {
+	NORTH: {
+		left: Directions.WEST,
+		right: Directions.EAST,
+	},
+	EAST: {
+		left: Directions.NORTH,
+		right: Directions.SOUTH,
+	},
+	SOUTH: {
+		left: Directions.EAST,
+		right: Directions.WEST,
+	},
+	WEST: {
+		left: Directions.SOUTH,
+		right: Directions.NORTH,
+	},
+};
 
 export default class Toybot {
 	public direction: Directions;
@@ -35,34 +54,26 @@ export default class Toybot {
 	}
 
 	public turnLeft(): Directions {
-		const newDirection: Directions =
-			this.direction === Directions.NORTH
-				? Directions.WEST
-				: this.direction - 1;
-		return (this.direction = newDirection);
+		return (this.direction = directionTurnMap[this.direction].left);
 	}
 
 	public turnRight(): Directions {
-		const newDirection: Directions =
-			this.direction === Directions.WEST
-				? Directions.NORTH
-				: this.direction + 1;
-		return (this.direction = newDirection);
+		return (this.direction = directionTurnMap[this.direction].right);
 	}
 
-	public move(): boolean {
+	public move(maxX: number, maxY: number): boolean {
 		switch (this.direction) {
 			case Directions.NORTH:
-				--this.position.y;
+				if (this.position.y < maxY) this.position.y += 1;
 				break;
 			case Directions.EAST:
-				++this.position.x;
+				if (this.position.x < maxX) this.position.x += 1;
 				break;
 			case Directions.SOUTH:
-				++this.position.y;
+				if (this.position.y > 0) this.position.y -= 1;
 				break;
 			case Directions.WEST:
-				--this.position.x;
+				if (this.position.x > 0) this.position.x -= 1;
 				break;
 			default:
 		}
