@@ -254,4 +254,4 @@ Conventional-Commit messages improve **Readability** of commit message and **Aut
 `npm run tscov`:        Runs typescript coverage report.
 `npm run release`:        Runs standard-version to bump version, and generate changelogs.
 `npm run publish-package`: Builds and publishes package to npm.
-`npm run docs`:         Build documentation using tsdocs.
+`npm run docs`:         Build documentation using tsdocs.  
