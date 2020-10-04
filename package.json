@@ -6,6 +6,9 @@
 	"repository": "https://github.com/praneybehl/toybot",
 	"author": "Praney Behl @praneybehl",
 	"license": "MIT",
+	"bin": {
+		"toybot": "bin/toybot"
+	},
 	"scripts": {
 		"start": "npm run build && node ./lib/main.js",
 		"build": "npm run clean:some && tsc -p .",
