@@ -33,8 +33,6 @@ export default class Command {
 				case "EXIT":
 					return false;
 				default:
-					showError(ConsoleMessage.INVALID_COMMAND);
-					simpleLog(ConsoleMessage.HELP);
 					break;
 			}
 		}
