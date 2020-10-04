@@ -1,6 +1,6 @@
 {
 	"name": "toybot",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "Toy robot challenge - typescript cli implementation",
 	"main": "./lib/main.js",
 	"repository": "https://github.com/praneybehl/toybot",

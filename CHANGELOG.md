@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/praneybehl/toybot/compare/v1.1.0...v1.1.1) (2020-10-04)
+
+
+### Bug Fixes
+
+* fix bug where it throws error when re-placing the robot ([271a2c1](https://github.com/praneybehl/toybot/commit/271a2c1dc1981566c1bfc69fca4955d0f77b5025))
+
 ## 1.1.0 (2020-10-04)
 
 
