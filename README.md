@@ -90,7 +90,7 @@ For testing, this project is setup with the following testing tools and librarie
 
 `Typescript coverage: tscov`
 
-`Linting: eslint`  
+`Linting: eslint`
 
 
 ## Continuous integration & testing
@@ -193,11 +193,8 @@ Below you can find full details about significant files and folders.
 ├── bin                                 // Node excutable folder
 ├── .sample-input                       // Sample input files.
 ├── src                                 // All app source lies here
-│   ├── actions                         // Actions for execution steps
-│   ├── constants                       // Constants
-│   ├── parser                          // File data parser functions.
-│   ├── questions                       // Command-line question prompts
-│   ├── utils                           // Logger utilities functions.
+│   ├── constants/                      // Constants
+│   ├── utils/                          // Logger utilities functions.
 │   ├── main.ts                         // Main entry point and cli interaction.
 │   ├── simulator.ts                    // Toy robot simulation class.
 │   ├── table.ts                        // Table class with contraints to robot placement and movement coordinates.
