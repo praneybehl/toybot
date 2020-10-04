@@ -22,6 +22,7 @@
 		"tscov": "tscov --min-coverage 90",
 		"tscov:d": "tscov --details",
 		"publish-package": "npm run build && npm publish",
+		"release": "standard-version",
 		"docs": "typedoc --out docs ./src"
 	},
 	"husky": {
