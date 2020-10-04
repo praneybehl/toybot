@@ -1,6 +1,6 @@
-# Toy Bot
+# Toy Bot ![Node CI](https://github.com/praneybehl/toybot/workflows/Node%20CI/badge.svg)  [![tscov](https://img.shields.io/badge/dynamic/json.svg?label=tscov&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.minCoverage&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fjeroenouw%2Fliftr-tscov%2Fmaster%2Fpackage.json)](https://github.com/jeroenouw/liftr-tscov)
 
-![ToyBot logo](https://github.com/praneybehl/toybot/raw/master/toybot.png) ![Node CI](https://github.com/praneybehl/toybot/workflows/Node%20CI/badge.svg)  [![tscov](https://img.shields.io/badge/dynamic/json.svg?label=tscov&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.minCoverage&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fjeroenouw%2Fliftr-tscov%2Fmaster%2Fpackage.json)](https://github.com/jeroenouw/liftr-tscov)
+![ToyBot logo](https://github.com/praneybehl/toybot/raw/master/toybot.png)
 
 ```
     _____                   ____            _       ____    _                       _           _
