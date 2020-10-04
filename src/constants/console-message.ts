@@ -10,12 +10,12 @@ export enum ConsoleMessage {
 	PROMPT = "Enter command",
 	HELP = `
 Commands List:
-PLACE 1,2,EAST 	---> Places the robot on x:1, y: 2 facing EAST to the Table
+PLACE 1,2,EAST 		---> Places the robot on x:1, y: 2 facing EAST(available NORTH | SOUTH | EAST | WEST) to the Table
 MOVE 			---> Move the robot 1 step in the direction it's facing
 RIGHT 			---> Turn the robot right
 LEFT 			---> Turn the robot left
 REPORT 			---> Report robot's position and facing direction on the table
-EXIT 			---> Exit Application
+EXIT 			---> Exit Toybot Simulator Application
 	`,
 	OUTPUT_SCORE = "Output: ",
 }
