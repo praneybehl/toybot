@@ -9,7 +9,7 @@ describe("Toybot", () => {
 			};
 			const toybot: Toybot = new Toybot(options);
 
-			expect(toybot.report()).toBe("3, 3, 2");
+			expect(toybot.report()).toBe("3, 3, SOUTH");
 			expect(toybot.direction).toBe(Directions.SOUTH);
 		});
 	});
@@ -40,15 +40,44 @@ describe("Toybot", () => {
 				position: { x: 3, y: 3 },
 				direction: Directions.NORTH,
 			};
-			const toybot2: Toybot = new Toybot(options);
-			expect(toybot2.direction).toBe(Directions.NORTH);
+			const toybot: Toybot = new Toybot(options);
+			expect(toybot.direction).toBe(Directions.NORTH);
 
-			expect(toybot2.turnRight()).toBe(Directions.EAST);
-			expect(toybot2.direction).toBe(Directions.EAST);
+			expect(toybot.turnRight()).toBe(Directions.EAST);
+			expect(toybot.direction).toBe(Directions.EAST);
 
-			expect(toybot2.turnRight()).toBe(Directions.SOUTH);
-			expect(toybot2.turnRight()).toBe(Directions.WEST);
-			expect(toybot2.turnRight()).toBe(Directions.NORTH);
+			expect(toybot.turnRight()).toBe(Directions.SOUTH);
+			expect(toybot.turnRight()).toBe(Directions.WEST);
+			expect(toybot.turnRight()).toBe(Directions.NORTH);
+		});
+	});
+
+	describe("#move", () => {
+		it("should move the toybot 1 step in the facing direction", () => {
+			const tableWidth = 5;
+			const tableHeight = 5;
+			const options: IToyBot = {
+				position: { x: 0, y: 0 },
+				direction: Directions.NORTH,
+			};
+			const toybot: Toybot = new Toybot(options);
+			toybot.move(tableWidth, tableHeight);
+			expect(toybot.report()).toBe("0, 1, NORTH");
+			toybot.turnRight();
+			toybot.move(tableWidth, tableHeight);
+			expect(toybot.report()).toBe("1, 1, EAST");
+		});
+		it("should not fall off the table if robot when moving on the border", () => {
+			const tableWidth = 5;
+			const tableHeight = 5;
+			const options: IToyBot = {
+				position: { x: 0, y: 0 },
+				direction: Directions.NORTH,
+			};
+			const toybot: Toybot = new Toybot(options);
+			toybot.turnLeft();
+			toybot.move(tableWidth, tableHeight);
+			expect(toybot.report()).toBe("0, 0, WEST");
 		});
 	});
 });
