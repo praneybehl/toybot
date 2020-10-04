@@ -87,8 +87,10 @@ Node.js, TypeScript, jest, tsdocs, tscov.
 For testing, this project is setup with the following testing tools and libraries:
 
 `Unit tests: jest`
+
 `Typescript coverage: tscov`
-`Linting: eslint`
+
+`Linting: eslint`  
 
 
 ## Continuous integration & testing
