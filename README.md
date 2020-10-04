@@ -77,7 +77,8 @@ The solution to this coding challenge takes more functional approach to programm
 **_`Possible Improvements:`_**
 - Further improvement can be made to this solution. Due to limitation of time, I decided to write tests for more critical parts of the solution, this can be improved by adding more coverage.
 - Further inline jsDoc comments can be added for improving the functional docs.
-- Further, add CLI input to accept Table size for more dynamic operation.
+- Add CLI input to accept Table size for more dynamic operation.
+- Add possibility to provide input commands from a text file.
 
 ## Tech used
 This project mainly relies on the following platform, tools and libraries:
