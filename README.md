@@ -24,6 +24,7 @@
 * [Installation and Prerequisites](#user-content-installation-and-prerequisites)
 * [Getting Started](#user-content-getting-started)
 * [Directory Structure](#user-content-directory-structure)
+* [Consistent code styles & standards](#user-content-consistent-code-styles--standards)
 * [Version Control](#user-content-version-control)
 * [NPM scripts dictionary ](#user-content-npm-scripts-dictionary)
 
@@ -93,7 +94,7 @@ For testing, this project is setup with the following testing tools and librarie
 ## Continuous integration & testing
 This project uses [Github Actions](https://github.com/praneybehl/toybot/actions) for CI pipelines for continuous build and testing.
 
-## Input Formats
+## Input Format
 This application allows the user to provide input in multiple formats, using .txt file, .json file and interactive commandline.
 Sample file input data is provided in the `.sample-input/` folder for your reference.
 
@@ -213,9 +214,16 @@ Below you can find full details about significant files and folders.
 └── README.md                           // Documentation for project.
 ```
 
+
+## Consistent code styles & standards
+Use of Typescript for strong & static type checking, unit tests, es-lint, prettier and git-commit hooks with [Husky](https://github.com/typicode/husky)
+for delivering **Consistency** and **Reliability**.
+
+
 ## Version Control
 This project is git version controlled along with [Conventional Commits](https://www.conventionalcommits.org/)
 specification for adding human and machine-readable meaning to commit messages.
+Conventional-Commit messages improve **Readability** of commit message and **Automatic Changelogs Generation** for semantic versioning and Release notes. See [CHANGELOG.md](https://github.com/praneybehl/toybot/blob/master/CHANGELOG.md) for details.
 
 [Reference](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit-message-header)
 ```
