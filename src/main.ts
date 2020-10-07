@@ -1,9 +1,9 @@
 import { createInterface, ReadLineOptions } from "readline";
 import Simulator from "./simulator";
 import Table from "./table";
-import { Directions } from "./toybot";
-import { showError, showTitleAndBanner, simpleLog } from "./utils";
+import { showTitleAndBanner, simpleLog } from "./utils";
 import { ConsoleMessage } from "./constants/console-message";
+import { parsePlaceOptions } from "./parser";
 
 const table = new Table();
 const simulator = new Simulator(table);
@@ -13,14 +13,6 @@ const readOptions: ReadLineOptions = {
 	output: process.stdout,
 	terminal: false,
 };
-
-enum ValidCommands {
-	"LEFT",
-	"RIGHT",
-	"MOVE",
-	"REPORT",
-	"PLACE",
-}
 
 const readLine = createInterface(readOptions);
 
@@ -32,44 +24,15 @@ readLine.prompt(true);
 readLine.on("line", (line: string) => {
 	const rawCommand = line.trim().toUpperCase().split(" ");
 	const command = rawCommand[0];
-	let exitApplication = false;
-	const isValidCommand = Object.keys(ValidCommands).includes(command);
-	if (isValidCommand) {
-		if (rawCommand.length > 1 && command === "PLACE") {
-			const parsedPlacement = rawCommand[1].split(",");
-			const x: number = parseInt(parsedPlacement[0]);
-			const y: number = parseInt(parsedPlacement[1]);
-			const direction: any = parsedPlacement[2];
-			const isValidPosition: boolean = table.isInBounds({ x, y });
-			const isValidDirection = Object.values(Directions).includes(
-				direction
-			);
-			if (isValidPosition && isValidDirection) {
-				simulator.run(command, {
-					position: { x, y },
-					direction: direction,
-				});
-			} else {
-				!isValidPosition && showError(ConsoleMessage.INVALID_POSITION);
-				!isValidDirection &&
-					showError(ConsoleMessage.INVALID_DIRECTION);
-			}
-		} else {
-			simulator.run(command);
-		}
-	} else {
-		if (command === "HELP") {
-			simpleLog(ConsoleMessage.HELP);
-		} else if (command === "EXIT") {
-			exitApplication = true;
-		} else {
-			showError(ConsoleMessage.INVALID_COMMAND);
-			simpleLog(ConsoleMessage.HELP);
-		}
-	}
-	readLine.prompt(true);
-	if (exitApplication) {
+	if (command === "EXIT") {
 		simpleLog(ConsoleMessage.STOP_BANNER);
 		readLine.close();
+	} else if (command === "PLACE") {
+		const placeOptions = parsePlaceOptions(rawCommand[1]);
+		placeOptions && simulator.run(command, placeOptions);
+		readLine.prompt(true);
+	} else {
+		simulator.run(command);
+		readLine.prompt(true);
 	}
 });
