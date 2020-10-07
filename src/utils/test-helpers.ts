@@ -1,4 +1,4 @@
-export function spyConsole() {
+export function spyConsole(): any {
 	const spy: any = {
 		console: {},
 	};
@@ -6,13 +6,13 @@ export function spyConsole() {
 	beforeAll(() => {
 		spy.console.error = jest
 			.spyOn(console, "error")
-			.mockImplementation(() => {});
+			.mockImplementation(() => ({}));
 		spy.console.info = jest
 			.spyOn(console, "info")
-			.mockImplementation(() => {});
+			.mockImplementation(() => ({}));
 		spy.console.log = jest
 			.spyOn(console, "log")
-			.mockImplementation(() => {});
+			.mockImplementation(() => ({}));
 	});
 
 	afterAll(() => {
