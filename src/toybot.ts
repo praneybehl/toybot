@@ -1,4 +1,5 @@
 import { IPosition } from "./table";
+import { PlaceOptions } from "./parser";
 
 export enum Directions {
 	NORTH = "NORTH",
@@ -6,10 +7,11 @@ export enum Directions {
 	SOUTH = "SOUTH",
 	WEST = "WEST",
 }
+export type DirectionsTypes = keyof typeof Directions;
 
 export interface IToyBot {
 	position: IPosition;
-	direction: Directions;
+	direction: DirectionsTypes;
 	isPlaced?: boolean;
 }
 
@@ -33,9 +35,9 @@ const directionTurnMap = {
 };
 
 export default class Toybot {
-	public direction: Directions;
+	public direction: DirectionsTypes;
 	private position: IPosition;
-	private isPlaced: boolean;
+	private isPlaced?: boolean;
 
 	constructor(params: IToyBot) {
 		this.position = params.position;
@@ -43,7 +45,7 @@ export default class Toybot {
 		this.isPlaced = params.isPlaced || false;
 	}
 
-	public place(options: IToyBot): void {
+	public place(options: PlaceOptions): void {
 		const { position, direction } = options;
 		const { x, y } = position;
 		if (!this.isPlaced) {
@@ -61,13 +63,13 @@ export default class Toybot {
 		return (this.direction = directionTurnMap[this.direction].right);
 	}
 
-	public move(maxX: number, maxY: number): boolean {
+	public move(maxX: number, maxY: number): void {
 		switch (this.direction) {
 			case Directions.NORTH:
-				if (this.position.y < maxY) this.position.y += 1;
+				if (this.position.y < maxY - 1) this.position.y += 1;
 				break;
 			case Directions.EAST:
-				if (this.position.x < maxX) this.position.x += 1;
+				if (this.position.x < maxX - 1) this.position.x += 1;
 				break;
 			case Directions.SOUTH:
 				if (this.position.y > 0) this.position.y -= 1;
@@ -77,7 +79,6 @@ export default class Toybot {
 				break;
 			default:
 		}
-		return true;
 	}
 
 	public report(): string {
