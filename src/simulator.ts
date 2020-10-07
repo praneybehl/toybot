@@ -1,4 +1,4 @@
-import Toybot, { Directions } from "./toybot";
+import Toybot from "./toybot";
 import Table from "./table";
 import { showError, showOutput, simpleLog } from "./utils";
 import { ConsoleMessage } from "./constants/console-message";
