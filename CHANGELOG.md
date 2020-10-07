@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/praneybehl/toybot/compare/v1.1.1...v1.2.0) (2020-10-07)
+
+
+### Features
+
+* add parser functions ([035f25a](https://github.com/praneybehl/toybot/commit/035f25a311719da816aa3cc46b4182ba431ef3b0))
+
+
+### Bug Fixes
+
+* eslint errros ([9341c9f](https://github.com/praneybehl/toybot/commit/9341c9f18ec31fb549baf89a9d92958ba762d945))
+
 ### [1.1.1](https://github.com/praneybehl/toybot/compare/v1.1.0...v1.1.1) (2020-10-04)
 
 
