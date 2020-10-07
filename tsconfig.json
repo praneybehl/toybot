@@ -1,21 +1,25 @@
 {
-  "compilerOptions": {
-    "target": "ES5",
-    "module": "commonjs",
-    "lib": ["es6", "es2015", "dom"],
-    "experimentalDecorators": true,
-    "outDir": "lib",
-    "rootDir": "src",
-    "strict": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "importHelpers": true
-  },
-  "exclude": [
-    "node_modules",
-    "lib",
-    "test",
-    "templates"
-  ]
+	"compilerOptions": {
+		"target": "ES5",
+		"module": "commonjs",
+		"lib": [
+			"es6",
+			"es2015",
+			"dom"
+		],
+		"experimentalDecorators": true,
+		"outDir": "lib",
+		"rootDir": "src",
+		"strict": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+		"importHelpers": true
+	},
+	"exclude": [
+		"node_modules",
+		"lib",
+		"test",
+		"templates"
+	]
 }
