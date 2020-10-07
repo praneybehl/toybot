@@ -196,7 +196,9 @@ Below you can find full details about significant files and folders.
 ├── src                                 // All app source lies here
 │   ├── constants/                      // Constants
 │   ├── utils/                          // Logger utilities functions.
-│   ├── main.ts                         // Main entry point and cli interaction.
+│   ├── main.ts                         // Input parser functions.
+│   ├── parser.ts                       // Input parser testss.
+│   ├── parser.spec.ts                  // Table class tests.
 │   ├── simulator.ts                    // Toy robot simulation class.
 │   ├── table.ts                        // Table class with contraints to robot placement and movement coordinates.
 │   ├── table.spec.ts                   // Table class tests.
