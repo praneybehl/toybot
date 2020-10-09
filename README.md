@@ -1,4 +1,4 @@
-# ToyBot Simulator ![Node CI](https://github.com/praneybehl/toybot/workflows/Node%20CI/badge.svg)  [![tscov](https://img.shields.io/badge/dynamic/json.svg?label=tscov&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.minCoverage&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fjeroenouw%2Fliftr-tscov%2Fmaster%2Fpackage.json)](https://github.com/jeroenouw/liftr-tscov)
+# ToyBot Simulator ![Node CI](https://github.com/praneybehl/toybot/workflows/Node%20CI/badge.svg)  [![tscov](https://img.shields.io/badge/dynamic/json.svg?label=tscov&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.minCoverage&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fjeroenouw%2Fliftr-tscov%2Fmaster%2Fpackage.json)](https://github.com/jeroenouw/liftr-tscov)[![DeepScan grade](https://deepscan.io/api/teams/11223/projects/14127/branches/254888/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=11223&pid=14127&bid=254888)
 
 ![ToyBot logo](https://github.com/praneybehl/toybot/raw/master/toybot.png)
 
